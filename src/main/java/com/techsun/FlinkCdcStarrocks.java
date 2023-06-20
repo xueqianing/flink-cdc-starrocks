@@ -57,7 +57,7 @@ public class FlinkCdcStarrocks {
                 rowDataWithMeta.setDatabase(database);
                 /**
                  * 1.获取MYSQL的binlog日志数据，在MysqlDebeziumDeserializationSchema 类里面添加了一个字段 __op字段
-                 * 2.__op = 1 代表是删除操作，__op = 1 代表是插入或者更新操作
+                 * 2.__op = 1 代表是删除操作，__op = 0 代表是插入或者更新操作
                  * 3.下游字段取值， changeLog 这个是一个json结构，下游字段名称和json的key匹配的（字段一样的）会写入数据库，不匹配的字段将自动丢弃。
                  */
                 rowDataWithMeta.addDataRow(changeLog);
