@@ -53,7 +53,7 @@ public class FlinkCdcStarrocks {
                 StarRocksSinkRowDataWithMeta rowDataWithMeta = new StarRocksSinkRowDataWithMeta();
                 //这里设置下游starrocks 的表名称名称，此示例代码取的是MySQL端的表名称
                 rowDataWithMeta.setTable(tableName);
-                //这里设置下游starrocks 的库名称，此示例代码取的是MySQL端的表名称
+                //这里设置下游starrocks 的库名称，此示例代码取的是MySQL端的库名称
                 rowDataWithMeta.setDatabase(database);
                 /**
                  * 1.获取MYSQL的binlog日志数据，在MysqlDebeziumDeserializationSchema 类里面添加了一个字段 __op字段
